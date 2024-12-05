@@ -1,0 +1,18 @@
+{
+  "name": "my-first-pipeline",
+  "version": "1.0.0",
+  "description": "A basic Node.js project for Jenkins pipeline demonstration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
