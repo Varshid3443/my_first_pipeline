@@ -1,0 +1,29 @@
+pipeline {
+    agent none  
+
+    stages {
+        stage('build') {
+            agent {
+                docker { 
+                    image 'node:latest'  
+                    args '-u root'  
+                }
+            }
+            steps {
+                script {
+                    
+                    git url: 'https://github.com/Varshid3443/my_first_pipeline', branch: 'master'
+
+                    
+                    sh '''
+                        npm install  # Install dependencies
+                        npm --version  # Check the npm version
+                        mkdir -p /varshid  # Create directory
+                        chmod 777 /varshid  # Set permissions for the directory
+                        cd /varshid  # Change to the new directory
+                    '''
+                }
+            }
+        }
+    }
+}
